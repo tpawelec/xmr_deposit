@@ -4,43 +4,46 @@
     --main-color: #313030;
     --second-color: #d0c805;
     --font-white: #f1f1f1;
-    --font-dark:  #1c1c1c;
+    --font-white-opacity: rgba(241, 241, 241, 0.5);
+    --font-dark: #1c1c1c;
 }
 
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    box-sizing: content-box;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--main-color);
 }
-
 
 .page-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-line-pack: start;
-        align-content: flex-start;
+    align-content: flex-start;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     background-color: var(--main-color);
     width: 100vw;
     height: 100vh;
     color: var(--font-white);
 }
+
 .page-header__title {
     font-size: 36px;
     margin-top: 25vh;
     height: 40px;
     display: block;
 }
-.page-header::after{
+
+.page-header::after {
     content: '';
     background-color: var(--second-color);
     height: 76vw;
@@ -48,9 +51,10 @@ body {
     position: absolute;
     bottom: -38vw;
     -webkit-clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
-            clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
-    
+    clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
+
 }
+
 .page-header__catchphrase {
     display: block;
     font-weight: 100;
@@ -61,20 +65,22 @@ body {
 .main-content {
     background-color: var(--main-color);
     height: auto;
-    padding: 38vw 0 40vw 0;
+    padding: 10vw 0 10vw 0;
 }
 
-.forms__title {
-    font-size: 26px;
+
+.main__title {
+    font-size: 22px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
     color: var(--font-white);
+    margin-top: 100px;
     margin-bottom: 45px;
     position: relative;
 }
 
-.forms__title::after {
+.main__title::after {
     content: '';
     width: 80%;
     height: 1px;
@@ -85,47 +91,70 @@ body {
 }
 
 
-.create-form {
+.form {
+    max-width: 100vw;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
     color: var(--font-white);
 }
 
-.create-form {
-    width: 100%;
-    text-align: center;
-}
-.create-form__label {
+.form__label {
     position: relative;
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+
 }
 
-.create-form__input-text {
+
+.form__label__icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    fill: var(--font-white-opacity);
+    cursor: pointer;
+}
+
+.form__label--optional {
+    font-size: 12px;
+    color: var(--font-white-opacity);
+}
+
+.form__input-text {
     border: none;
     border-radius: 8px;
-    -webkit-border-radius: 8px; 
+    -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     margin-bottom: 20px;
 }
-.create-form input[type=radio]:checked,
-.create-form input[type=radio]:not(:checked) {
+
+.form input[type=radio]:checked,
+.form input[type=radio]:not(:checked) {
     position: absolute;
     visibility: hidden;
 }
 
 
-.create-form__input-radio:checked + .create-form__label,
-.create-form__input-radio:not(:checked) + .create-form__label {
+.form__input-radio:checked+.form__label,
+.form__input-radio:not(:checked)+.form__label {
     cursor: pointer;
 
 }
-.create-form__input-radio:checked + .create-form__label::before,
-.create-form__input-radio:not(:checked) + .create-form__label::before {
+
+.form__input-radio:checked+.form__label::before,
+.form__input-radio:not(:checked)+.form__label::before {
     content: '';
     position: absolute;
-    left: -30px;
+    left: calc(50vw - 130px);
     background: transparent;
     height: 16px;
     width: 16px;
@@ -134,31 +163,97 @@ body {
 
 }
 
-.create-form__input-radio:checked + .create-form__label::after,
-.create-form__input-radio:not(:checked) + .create-form__label::after {
+.form__input-radio:checked+.form__label::after,
+.form__input-radio:not(:checked)+.form__label::after {
     content: '';
     width: 10px;
     height: 10px;
     background: var(--font-white);
     position: absolute;
     top: 6px;
-    left: -24px;
+    left: calc(50vw - 124px);
     border-radius: 100%;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 
 }
 
-.create-form__input-radio:checked + .create-form__label::after {
+.form__input-radio:checked+.form__label::after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
-.create-form__input-radio:not(:checked) + .create-form__label::after {
+
+.form__input-radio:not(:checked)+.form__label::after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
-.create-form__label .create-form__tooltip {
+
+.form__input-submit {
+    background-color: var(--second-color);
+    color: var(--font-dark);
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    min-width: 200px;
+}
+
+.form__label .form__tooltip {
     display: none;
+    position: absolute;
+    z-index: 9999;
+    background-color: var(--font-white);
+    color: var(--font-dark);
+    font-size: 12px;
+    opacity: 0.8;
+    min-width: 40vw;
+    max-width: 60vw;
+    right: 0;
+    bottom: 30px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.form__label__icon:active+.form__tooltip,
+.form__label__icon:hover+.form__tooltip {
+    display: block;
+}
+
+.faq {
+    color: var(--font-white);
+    padding: 20px;
+}
+
+.faq__item {
+    margin-top: 15px;
+}
+.faq__question{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.faq__answer {
+    display: block;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    text-decoration: initial;
+}
+
+.footer {
+    background-color: var(--second-color);
+    padding: 10px;
+    font-size: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: 100;
+    font-style: italic;
 }
