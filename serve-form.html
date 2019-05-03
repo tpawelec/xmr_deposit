@@ -22,9 +22,89 @@
 
     <main class="main-content">
 
-        
+
         <section class="form-info">
-            <iframe src="deposit-confirmed.html" frameborder="0" class="form-info__frame"></iframe>
+            <!--
+                DEPOSIT TO >>ADDRESS<<
+            -->
+            <div class="deposit-to">
+                <h3 class="main__title">Deposit XMR to</h3>
+                <p class="deposit-to__addr" id="depositAdress">###ADDR###</p>
+                <div class="lds-default">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!--
+                DEPOSIT DETECTED
+            -->
+            <div class="dep-detected">
+                <h3 class="main__title">Deposit detected</h3>
+                <p class="dep-detected__confirmations">
+                    Confirmations
+                </p>
+                <p class="dep-detected__stats">
+                    <span class="dep-detected__number" id="progressConf">00</span>
+                    /
+                    <span class="dep-detected__number" id="totalConf">100</span>
+                </p>
+                <div class="lds-default">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!--
+                DEPOSIT CONFIRMED
+            -->
+            <div class="dep-confirmed">
+                <h3 class="main__title">Deposit confirmed</h3>
+                <p class="dep-confirmed__title">
+                    Deposit
+                </p>
+                <p class="dep-confirmed__value" id="depositValue">
+                    0.0000
+                </p>
+                <p class="dep-confirmed__title">
+                    Loan
+                </p>
+                <p class="dep-confirmed__value" id="depositLoan">
+                    0.0000
+                </p>
+                <p class="dep-confirmed__title">
+                    Exchanged to BTC
+                </p>
+                <p class="dep-confirmed__value" id="depositExchanged">
+                    0.0000
+                </p>
+                <p class="dep-confirmed__title">
+                    Returned to XMR
+                </p>
+                <p class="dep-confirmed__value" id="depositReturned">
+                    0.0000
+                </p>
+
+                <a href="index.html" class="dep-confirmed__btn btn" target="_top">Homepage</a>
+            </div>
         </section>
 
         <section class="faq">
