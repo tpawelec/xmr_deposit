@@ -279,7 +279,7 @@ body {
 
     .admin-table__cell--header:nth-child(1)
     .admin-table__cell:nth-child(1) {
-        width: 66%;
+        width: 62%;
     }
     
     .admin-table__cell--header:nth-child(2),
@@ -288,12 +288,12 @@ body {
     }
     .admin-table__cell--header:nth-child(3),
     .admin-table__cell:nth-child(3) {
-        width: 3%;
+        width: 5%;
     }
     
     .admin-table__cell--header:nth-child(4),
     .admin-table__cell:nth-child(4) {
-        width: 3%;
+        width: 5%;
     }
     
     .admin-table__cell--header:nth-child(5),
