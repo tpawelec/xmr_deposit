@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <title>XML Deposit</title>
 </head>
@@ -25,8 +26,8 @@
             <h3 class="main__title">create a new order</h3>
 
             <form class="form" action="#" method="post">
-                <ul class="form__wrapper">
-                    <li class="form__item">
+                
+                    <p class="form__item">
                         <span class="form__label">
                             Bitcoin adress
                             <svg class="form__label__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -40,8 +41,8 @@
                             </span>
                         </span>
                         <input type="text" name="btc-adress" id="btcAdress" class="form__input-text">
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
                         <span class="form__label">
                             XMR return adress
                             <svg class="form__label__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -55,8 +56,8 @@
                             </span>
                         </span>
                         <input type="text" name="xmr-ret-addr" id="xmrReturnAdress" class="form__input-text">
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
                         <span class="form__label">
                             E-mail
                             <svg class="form__label__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -70,8 +71,8 @@
                             </span>
                         </span>
                         <input type="text" name="e-mail" id="eMail" class="form__input-text">
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
                         <span class="form__label">
                             Bitcoin amount
                             <svg class="form__label__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -88,32 +89,32 @@
                             </span>
                         </span>
                         <input type="text" name="btc-amount" id="btcAmount" class="form__input-text">
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
                         <input type="radio" name="send-to" id="sendToBTC" class="form__input-radio" checked>
                     
                         <label for="sendToBTC" class="form__label">
                             Send excess to BTC
                         </label>
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
                         <input type="radio" name="send-to" id="sendToXMR" class="form__input-radio">
                     
                         <label for="sendToXMR" class="form__label">
                             Send excess to XMR
                         </label>
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
                         <input type="submit" value="Start" class="form__input-submit btn">
-                    </li>
-                </ul>
+                    </p>
+                
             </form>
 
             <h3 class="main__title">track transaction</h3>
 
             <form action="#" method="post" class="form">
-                <ul class="form__wrapper">
-                    <li class="form__item">
+                
+                    <p class="form__item">
                         <span class="form__label">
                             Transaction address
                             <svg class="form__label__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -128,13 +129,13 @@
                         </span>
 
                         <input type="text" name="trans-adress" id="transTrack" class="form__input-text">
-                    </li>
-                    <li class="form__item">
+                    </p>
+                    <p class="form__item">
 
                         <input type="submit" value="Track" class="form__input-submit btn">
-                    </li>
+                    </p>
 
-                    </ul>
+                    
             </form>
         </section>
 
